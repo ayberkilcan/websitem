@@ -127,29 +127,49 @@
     <!-- PROJECTS END -->
 
     <!-- CONTACT START -->
-        <section class="contact" id="contact">
-            <h2 class="heading">Bana Ulaşın</h2>
-            <form action="#">
-                <div class="input-group">
-                    <div class="input-box">
-                    <input type="text" placeholder="Adınız" required>
-                    <input type="email" placeholder="E-posta Adresiniz" required>
-                    </div>
+<section class="contact" id="contact">
+  <h2 class="heading">Bana Ulaşın</h2>
 
-                    <div class="input-box">
-                    <input type="number" placeholder="Telefon Numaranız" required>
-                    <input type="text" placeholder="Konu" required>
-                    </div>
+  <!-- Başarı mesajı kutusu -->
+  <div id="success-message" style="
+    display: none;
+    background-color: #1abc9c;
+    color: white;
+    padding: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+    border-radius: 5px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  ">
+    <p class="success-text">Mesajınız başarıyla gönderildi. En kısa sürede size ulaşacağım.</p>
+  </div>
 
-                </div>
-                <div class="input-group-2">
-                    <textarea placeholder="Mesajınız" id="" cols="30" rows="10"> </textarea>
-                    <input type="submit" value="Mesajı Gönder" class="btn">
-                </div>
+  <form action="https://formsubmit.co/seninmailadresin@gmail.com" method="POST">
+    <div class="input-group">
+      <div class="input-box">
+        <input type="text" name="name" placeholder="Adınız" required>
+        <input type="email" name="email" placeholder="E-posta Adresiniz" required>
+      </div>
 
-            </form>
+      <div class="input-box">
+        <input type="tel" name="phone" placeholder="Telefon Numaranız" required>
+        <input type="text" name="subject" placeholder="Konu" required>
+      </div>
+    </div>
 
-        </section>
+    <div class="input-group-2">
+      <textarea name="message" placeholder="Mesajınız" cols="30" rows="10" required></textarea>
+
+      <input type="text" name="_honey" style="display:none">
+
+      <input type="hidden" name="_next" value="https://ayberkilcan.github.io/web_sitem/index.html?success=true">
+
+      <input type="submit" value="Mesajı Gönder" class="btn">
+    </div>
+  </form>
+</section>
     <!-- CONTACT END -->
 
     <!-- FOOTER START -->
